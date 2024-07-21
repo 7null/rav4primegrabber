@@ -14,11 +14,11 @@ import warnings
 from rav4prime_grabber import config, wafbypass
 
 # Get the model that we should be searching for.
-MODEL = os.environ.get("MODEL")
+#MODEL = os.environ.get("MODEL")
 
 # Get the zipcode and distance to search.
-ZIPCODE = os.environ.get("ZIPCODE")
-DISTANCE = os.environ.get("DISTANCE")
+#ZIPCODE = os.environ.get("ZIPCODE")
+#DISTANCE = os.environ.get("DISTANCE")
 
 @cache
 def get_vehicles_query():
@@ -29,7 +29,7 @@ def get_vehicles_query():
     # Replace certain place holders in the query with values.
     query = query.replace("ZIPCODE", "80202")
     query = query.replace("MODELCODE", "rav4prime")
-    query = query.replace("DISTANCEMILES", "500")
+    query = query.replace("DISTANCEMILES", "5")
     query = query.replace("LEADIDUUID", str(uuid.uuid4()))
 
     return query
