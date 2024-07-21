@@ -27,9 +27,9 @@ def get_vehicles_query():
         query = fileh.read()
 
     # Replace certain place holders in the query with values.
-    query = query.replace("ZIPCODE", ZIPCODE)
-    query = query.replace("MODELCODE", MODEL)
-    query = query.replace("DISTANCEMILES", DISTANCE)
+    query = query.replace("ZIPCODE", "80202")
+    query = query.replace("MODELCODE", "rav4prime")
+    query = query.replace("DISTANCEMILES", "500")
     query = query.replace("LEADIDUUID", str(uuid.uuid4()))
 
     return query
