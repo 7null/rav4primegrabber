@@ -18,7 +18,7 @@ MODEL = "rav4prime"
 
 # Get the zipcode and distance to search.
 ZIPCODE = "80202"
-DISTANCE = "5"
+DISTANCE = "500"
 
 @cache
 def get_vehicles_query():
@@ -28,7 +28,7 @@ def get_vehicles_query():
 
     # Replace certain place holders in the query with values.
     query = query.replace("ZIPCODE", "80202")
-    query = query.replace("MODELCODE", "rav4prime")
+    query = query.replace("MODELCODE", "4550")
     query = query.replace("DISTANCEMILES", "5")
     query = query.replace("LEADIDUUID", str(uuid.uuid4()))
 
