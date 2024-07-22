@@ -20,7 +20,11 @@ class WAFBypass:
             context = browser.new_context(viewport={"width": 1920, "height": 1080})
             page = context.new_page()
             page.on("request", self.intercept_request)
-            page.goto("https://www.toyota.com/search-inventory/model/rav4prime/?_=1234")
+            cache_buster = int(time.time() * 1000)
+            url = f"https://www.toyota.com/search-inventory/model/rav4prime/?_={cache_buster}"
+            page.goto(url)
+            
+           # page.goto("https://www.toyota.com/search-inventory/model/rav4prime/?_=1234")
             page.get_by_placeholder("ZIP Code").click()
             page.get_by_placeholder("ZIP Code").fill("91501")
             page.get_by_placeholder("ZIP Code").press("Enter")
