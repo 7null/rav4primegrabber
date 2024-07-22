@@ -66,7 +66,12 @@ def query_toyota(page_number, query, headers):
 
     # Make request.
     json_post = {"query": query}
-    url = "https://api.search-inventory.toyota.com/graphql?_124"
+    #url = "https://api.search-inventory.toyota.com/graphql?_124"
+    cache_buster = int(time.time() * 1000)
+    url = f"https://www.toyota.com/search-inventory/model/rav4prime/?_={cache_buster}"
+            
+
+    
     resp = requests.post(
         url,
         json=json_post,
