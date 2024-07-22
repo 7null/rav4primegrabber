@@ -22,7 +22,7 @@ class WAFBypass:
             page.on("request", self.intercept_request)
             page.goto("https://www.toyota.com/search-inventory/")
             page.get_by_placeholder("ZIP Code").click()
-            page.get_by_placeholder("ZIP Code").fill("90210")
+            page.get_by_placeholder("ZIP Code").fill("80202")
             page.get_by_placeholder("ZIP Code").press("Enter")
             page.wait_for_load_state("networkidle")
             browser.close()
