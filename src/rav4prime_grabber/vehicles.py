@@ -17,7 +17,7 @@ from rav4prime_grabber import config, wafbypass
 MODEL = "rav4prime"
 
 # Get the zipcode and distance to search.
-ZIPCODE = "80202"
+ZIPCODE = "91501"
 DISTANCE = "500"
 
 @cache
@@ -27,7 +27,7 @@ def get_vehicles_query():
         query = fileh.read()
 
     # Replace certain place holders in the query with values.
-    query = query.replace("ZIPCODE", "80202")
+    query = query.replace("ZIPCODE", "91501")
     query = query.replace("MODELCODE", "rav4prime")
     query = query.replace("DISTANCEMILES", "500")
     query = query.replace("LEADIDUUID", str(uuid.uuid4()))
