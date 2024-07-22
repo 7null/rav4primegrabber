@@ -22,7 +22,7 @@ class WAFBypass:
             page.on("request", self.intercept_request)
             page.goto("https://www.toyota.com/search-inventory/model/rav4prime/")
             page.get_by_placeholder("ZIP Code").click()
-            page.get_by_placeholder("ZIP Code").fill("80218")
+            page.get_by_placeholder("ZIP Code").fill("91501")
             page.get_by_placeholder("ZIP Code").press("Enter")
             page.wait_for_load_state("networkidle")
             browser.close()
