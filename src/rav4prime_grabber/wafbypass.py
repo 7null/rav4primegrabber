@@ -20,7 +20,7 @@ class WAFBypass:
             context = browser.new_context(viewport={"width": 1920, "height": 1080})
             page = context.new_page()
             page.on("request", self.intercept_request)
-            page.goto("https://www.toyota.com/search-inventory/")
+            page.goto("https://www.toyota.com/search-inventory/model/rav4prime/")
             page.get_by_placeholder("ZIP Code").click()
             page.get_by_placeholder("ZIP Code").fill("80202")
             page.get_by_placeholder("ZIP Code").press("Enter")
