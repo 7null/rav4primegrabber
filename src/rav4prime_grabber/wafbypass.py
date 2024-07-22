@@ -1,5 +1,6 @@
 # Bypass the AWS WAF in front of the GraphQL endpoint.
 from playwright.sync_api import sync_playwright
+import time
 
 
 class WAFBypass:
