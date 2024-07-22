@@ -66,7 +66,7 @@ def query_toyota(page_number, query, headers):
 
     # Make request.
     json_post = {"query": query}
-    url = "https://api.search-inventory.toyota.com/graphql"
+    url = "https://api.search-inventory.toyota.com/graphql?_124"
     resp = requests.post(
         url,
         json=json_post,
